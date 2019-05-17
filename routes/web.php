@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PagesController@home');
+
+Route::get('/help', 'PagesController@help');
+
+Route::get('/about', 'PagesController@about');
+
+Route::get('/contact', 'PagesController@contact');
+
+Route::get('/login', function() {
+    return 'This is login page';
 });
