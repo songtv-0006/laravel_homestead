@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('master')
 @section('title', 'Home')
 
 @section('content')
@@ -11,7 +11,7 @@
             <h3 class="text-center margin-top-100 editContent">Building Practical
                 Applications</h3>
             <div class="text-center">
-                <img src="https://learninglaravel.net/img/LearningLaravel5_cover0.png" width="400" height="600" alt="">
+                <img src="https://learninglaravel.net/img/LearningLaravel5_cover0.png" width="400" height="550" alt="">
             </div>
         </div>
     </div>
