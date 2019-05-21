@@ -21,6 +21,30 @@ Route::get('/contact', 'TicketsController@create');
 
 Route::post('/contact', 'TicketsController@store');
 
+Route::get('/tickets', 'TicketsController@index');
+
+Route::get('/tickets/{slug?}', 'TicketsController@show');
+
+Route::get('/tickets/{slug?}/edit', 'TicketsController@edit');
+
+Route::post('/tickets/{slug?}/edit', 'TicketsController@update');
+
+Route::post('/tickets/{slug?}/delete', 'TicketsController@destroy');
+
+Route::post('/comment','CommentsController@newComment');
+
+Route::get('/tickets', 'TicketsController@index');
+
+Route::get('/tickets/{slug?}', 'TicketsController@show');
+
+Route::get('/tickets/{slug?}/edit', 'TicketsController@edit');
+
+Route::post('/tickets/{slug?}/edit', 'TicketsController@update');
+
+Route::post('/tickets/{slug?}/delete', 'TicketsController@destroy');
+
+Route::post('/comment','CommentsController@newComment');
+
 Route::get('/login', function() {
     return 'This is login page';
 });
