@@ -4,19 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model
+class Post extends Model
 {
     protected $guarded = ['id'];
-    
-    public function user(){
-        return $this->belongsTo('App\User');
+
+    public function categories(){
+        return $this->belongsToMany('App\Category')->withTimestamps();
     }
 
     public function comments(){
         return $this->morphMany('App\Comment', 'post');
-    }
-
-    public function getTitle(){
-        return $this->title;
     }
 }
