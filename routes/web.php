@@ -78,4 +78,4 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
 
 Route::get('blog','BlogController@index');
 
-Route::get('blog\{slug?}', 'BlogController@show');
+Route::get('/blog/{slug?}', 'BlogController@show');
